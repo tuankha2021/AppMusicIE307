@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:musicapp="clr-namespace:MusicApp"
+            x:Class="MusicApp.Tabbed"
+             xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+            android:TabbedPage.ToolbarPlacement="Bottom"
+            >
+
+    <!--Pages can be added as references or inline-->
+    <musicapp:TrangChu Title="Trang chủ"  Icon="trangchu.png" ></musicapp:TrangChu>
+    <musicapp:CaNhan Title="Cá nhân" Icon="canhan.png"></musicapp:CaNhan>
+    <musicapp:KhamPha  Title="Khám phá" Icon="khampha.png"></musicapp:KhamPha>
+    <musicapp:TinTuc Title="Tin tức" Icon="tintuc.png"></musicapp:TinTuc>
+</TabbedPage>

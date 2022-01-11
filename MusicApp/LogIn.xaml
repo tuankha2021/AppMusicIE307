@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MusicApp.LogIn"
+             Title="Đăng Nhập">
+    <ContentPage.Content>
+        <RelativeLayout>
+            <Image Source="loginbg.png" HorizontalOptions="Fill" Aspect="Fill"
+                   RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width}"
+                  RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height}"/>
+            <Grid RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width}"
+                  RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height}">
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+
+                <Label Text="Đăng nhập" 
+                       TextColor="Wheat"
+                       FontSize="30" 
+                       Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" 
+                       HorizontalOptions="Center" VerticalOptions="Center" 
+                       />
+                <Label Text="Tên đăng nhập: " 
+                       TextColor="Wheat"
+                       FontSize="20" 
+                       Grid.Row="1" Grid.Column="0" 
+                       VerticalOptions="Center" 
+                       Margin="15,0,0,0"
+                       />
+                <Entry Keyboard="Text" 
+                       TextColor="Wheat"
+                       ClearButtonVisibility="WhileEditing"
+                       Grid.Column="1" Grid.Row="1" 
+                       VerticalOptions="Center"
+                       Margin="0,0,15,0"
+                       />
+                <Label Text="Mật khẩu: " 
+                       TextColor="Wheat"
+                       FontSize="20" 
+                       Grid.Row="2" Grid.Column="0" 
+                       VerticalOptions="Center"
+                       Margin="15,0,0,0"
+                       />
+                <Entry Keyboard="Text" 
+                       TextColor="Wheat"
+                       ClearButtonVisibility="WhileEditing"
+                       IsPassword="True" 
+                       Grid.Column="1" Grid.Row="2" 
+                       VerticalOptions="Center"
+                       Margin="0,0,15,0"
+                       />
+                <CheckBox x:Name="checkbox" 
+                          Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="2" 
+                          VerticalOptions="Center"  
+                          Margin="140,0,0,0" 
+                          />
+                <Label Text="Lưu mật khẩu" 
+                       TextColor="Wheat"
+                       Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2"
+                       VerticalOptions="Center" Margin="170,0,0,0"
+                       />
+                <Button x:Name="logIn_button"
+                        Text="Đăng nhập" 
+                        Clicked="logIn_button_Clicked"
+                        VerticalOptions="Start" HorizontalOptions="Center" 
+                        CornerRadius="10" 
+                        Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" 
+                        />
+                <Label Text="- - - Hoặc - - -"
+                       TextColor="Wheat"
+                       FontSize="20"
+                       Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2"
+                       VerticalOptions="Start" HorizontalOptions="Center"
+                       />
+                <Image Source="google.png"
+                       Grid.Row="6" Grid.Column="0"                        
+                       />
+                <Image Source="facebook.png"
+                       Grid.Row="6" Grid.Column="1"
+                       />
+                <Label Text="Google" 
+                       TextColor="Wheat"
+                       FontSize="16"
+                       Grid.Row="7" Grid.Column="0" 
+                       VerticalTextAlignment="Start" HorizontalTextAlignment="Center"
+                       />
+                <Label Text="Facebook" 
+                       TextColor="Wheat"
+                       FontSize="16"
+                       Grid.Row="7" Grid.Column="1" 
+                       VerticalTextAlignment="Start" HorizontalTextAlignment="Center"
+                       />
+                <Label  Text="Bạn chưa có tài khoản?"
+                        TextColor="Wheat"
+                        Grid.Row="8" Grid.Column="0" Grid.ColumnSpan="2"
+                        VerticalOptions="Start" Margin="0,0,105,0" HorizontalOptions="End"
+                />
+                <Button x:Name="SignUp_button" 
+                        Clicked="SignUp_button_Clicked" 
+                        Text="Đăng ký" 
+                        CornerRadius="7" HeightRequest="35"
+                        Grid.Row="8" Grid.Column="0" Grid.ColumnSpan="2" 
+                        VerticalOptions="Start" Margin="0,-7,15,0" HorizontalOptions="End"/>
+               
+            </Grid>
+        </RelativeLayout>
+    </ContentPage.Content>
+</ContentPage>

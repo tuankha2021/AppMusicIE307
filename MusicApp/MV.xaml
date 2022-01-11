@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MusicApp.MV" Title="MV">
+    <ContentPage.Content>
+        <RelativeLayout>
+            <Image Source="bckgrd.png" HorizontalOptions="Fill" Aspect="Fill"
+                   RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width}"
+                  RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height}"/>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition Height="150" />
+                    <RowDefinition/>
+                    <RowDefinition Height="150"/>
+                    <RowDefinition Height="120"/>
+                    <RowDefinition Height="20"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Label Text="Top MV" Grid.Row="0" FontAttributes="Bold" Margin="10,15,0,0" FontSize="20"/>
+                <RelativeLayout Grid.Row="1" Margin="0,0,35,0">
+                    <ListView        
+                              SeparatorVisibility="None"
+                              RowHeight=        "170"
+                              Rotation=         "270"
+                              RelativeLayout.XConstraint=       "{ConstraintExpression Type=RelativeToParent,Property=Width, Factor=0.3,Constant=5}"
+                              RelativeLayout.YConstraint=       "{ConstraintExpression Type=RelativeToParent,Property=Width, Factor=-0.5,Constant=75}"
+                              RelativeLayout.HeightConstraint=  "{ConstraintExpression Type=RelativeToParent,Property=Width, Factor=1}"
+                              RelativeLayout.WidthConstraint=   "{ConstraintExpression Type=Constant,Constant=170}"                          
+                          ItemsSource="{Binding MVtops}">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <ContentView Rotation="90">
+                                        <StackLayout Padding="10">
+                                            <Grid>
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition/>
+                                                    <RowDefinition />
+                                                </Grid.RowDefinitions>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition />
+                                                    <ColumnDefinition />
+                                                </Grid.ColumnDefinitions>
+                                                <StackLayout Grid.Row="0" Grid.ColumnSpan="2">
+                                                    <Frame Padding="0" CornerRadius="5">
+                                                        <Image Source="{Binding MVimg}"/>
+                                                    </Frame>
+                                                </StackLayout>
+                                                <StackLayout Grid.Row="1" Grid.Column="0" Margin="-20,-18,0,0" Padding="30">
+                                                    <Frame Padding="0" CornerRadius="100">
+                                                        <Image Source="{Binding MVava}"/>
+                                                    </Frame>
+                                                </StackLayout>
+                                                <Label Text="{Binding MVname}" Grid.Row="1" Grid.Column="1" Margin="-20,10,0,0" FontSize="15"/>
+                                            </Grid>
+                                        </StackLayout>
+                                    </ContentView>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </RelativeLayout>
+                <Label Text="Mới phát hành" FontSize="20" FontAttributes="Bold" Grid.Row="2" Margin="10,0,0,0"/>
+                <RelativeLayout Grid.Row="3" Margin="0,-10,35,0">
+                    <ListView        
+                              SeparatorVisibility="None"
+                              RowHeight=        "170"
+                              Rotation=         "270"
+                              RelativeLayout.XConstraint=       "{ConstraintExpression Type=RelativeToParent,Property=Width, Factor=0.3,Constant=5}"
+                              RelativeLayout.YConstraint=       "{ConstraintExpression Type=RelativeToParent,Property=Width, Factor=-0.5,Constant=75}"
+                              RelativeLayout.HeightConstraint=  "{ConstraintExpression Type=RelativeToParent,Property=Width, Factor=1}"
+                              RelativeLayout.WidthConstraint=   "{ConstraintExpression Type=Constant,Constant=170}"                          
+                          ItemsSource="{Binding MVnews}">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <ContentView Rotation="90">
+                                        <StackLayout Padding="10">
+                                            <Grid>
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition/>
+                                                    <RowDefinition />
+                                                </Grid.RowDefinitions>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition />
+                                                    <ColumnDefinition />
+                                                </Grid.ColumnDefinitions>
+                                                <StackLayout Grid.Row="0" Grid.ColumnSpan="2">
+                                                    <Frame Padding="0" CornerRadius="5">
+                                                        <Image Source="{Binding MVimg}"/>
+                                                    </Frame>
+                                                </StackLayout>
+                                                <StackLayout Grid.Row="1" Grid.Column="0" Margin="-20,-18,0,0" Padding="30">
+                                                    <Frame Padding="0" CornerRadius="100">
+                                                        <Image Source="{Binding MVava}"/>
+                                                    </Frame>
+                                                </StackLayout>
+                                                <Label Text="{Binding MVname}" Grid.Row="1" Grid.Column="1" Margin="-20,10,0,0" FontSize="15"/>
+                                            </Grid>
+                                        </StackLayout>
+                                    </ContentView>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </RelativeLayout>
+                <Image Source="mv1.jpg" Grid.Row="4" Grid.Column="0" Aspect="Fill" Margin="60,-16,60,0"/>
+                <Label Text="Túp Lều Vàng" Grid.Row="5" Grid.Column="0" HorizontalOptions="Center" Margin="0,-7,0,0"
+                       />
+            </Grid>
+        </RelativeLayout>
+    </ContentPage.Content>
+</ContentPage>

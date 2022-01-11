@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MusicApp.TrangPlay">
+    <ContentPage.Content>
+        <RelativeLayout>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition Height="50"/>
+                    <RowDefinition />
+                    <RowDefinition Height="40"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Image Source="play.png" Grid.Row="0" Margin="15,0,0,0"/>
+                <StackLayout Grid.Row="1" Grid.Column="0">
+                    <Frame Padding="0" HeightRequest="50" Margin="15,0,335,0" CornerRadius="100">
+                        <Image Source="mvtop1ava.jpg" HorizontalOptions="Start"/>
+                    </Frame>
+                </StackLayout>
+                <Label Text="Lỡ Duyên" Grid.Row="1" HorizontalOptions ="Start" Margin="80,0,0,0"/>
+                <ImageButton Source="plus.png" x:Name="plus_btn" Clicked="plus_btn_Clicked" Grid.Row="1" HorizontalOptions="End" Margin="0,0,10,0" BackgroundColor="Transparent"/>
+                <Frame Grid.Row="2" HeightRequest="15" Margin="15,0,0,0">
+                    <StackLayout>
+                        <Label Text="Năm quan đổi lấy, lấy miệng cười.Mười quan anh chẳng tiếc. Chỉ tiếc người là người có duyên. Lại một người ra đi mãi mãi. Từng nỗi nhớ cuốn theo đêm dài. Chợt lòng bỗng thấy cô đơn lẻ loi. Tôi lại ngồi khóc cho cuộc tình tôi. Coi như tình đôi ta, đến lúc phải rời xa "/>
+                        <Label Text="Này người yêu ơi. Đôi chân lang thang về nơi đâu.Bao yêu thương giờ nơi đâu. Câu thơ tình xưa vội phai mờ.Theo làn xương tan biến trong cõi mơ. Mưa bụi rơi trên làn mi mắt. Ngày chia lìa hoa rơi buồn hiu hắt. Tiếng đàn ai thêm sầu tương tư lặng mình trong chiều hoàng hôn"/>
+                    </StackLayout>
+                </Frame>
+            </Grid>
+        </RelativeLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MusicApp.AppShell"
+             xmlns:dst="clr-namespace:MusicApp">
+
+    <Shell.FlyoutBackground>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+            <GradientStop Color="#29d026" Offset="0.1" />
+            <GradientStop Color="#d0c826" Offset="0.6" />
+            <GradientStop Color="#F27121" Offset="1.0" />
+        </LinearGradientBrush>
+    </Shell.FlyoutBackground>
+
+    <Shell.FlyoutHeaderTemplate>
+        <DataTemplate>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="150" />
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="20"/>
+                    <RowDefinition Height="65" />
+                    <RowDefinition Height="55" />
+                    <RowDefinition Height="55" />
+                    <RowDefinition Height="55" />
+                    <RowDefinition Height="200" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+
+                <StackLayout Grid.Row="0" Grid.ColumnSpan="3"  Margin="100,10,100,0">
+                    <Frame Padding="0" CornerRadius="100">
+                        <Image Source="av3.jpg"/>
+                    </Frame>
+                </StackLayout>
+                <Label Text="Nguyễn Ngọc Huy" Grid.Row="1" Grid.ColumnSpan="3" HorizontalOptions="Center" FontAttributes="Bold" FontSize="20"/>
+                <Image Source="chart1.png" Grid.Row="2" Grid.Column="0" Margin="40,0,0,0"/>
+                <Image Source="setting.png" Grid.Row="2" Grid.Column="1"/>
+                <Image Source="user.png" Grid.Row="2" Grid.Column="2" Margin="0,0,40,0"/>
+
+                <Button x:Name="theloai_btn" Clicked="theloai_btn_Clicked"  Text="Thể loại" Grid.Row="3" Grid.ColumnSpan="3" CornerRadius="100" Margin="40,15,40,0"/>
+                <Button x:Name="MV" Clicked="MV_Clicked" Text="MV" Grid.Row="4" CornerRadius="100" Grid.ColumnSpan="3" Margin="40,5,40,0"/>
+                <Button x:Name="casi" Clicked="casi_Clicked" Text="Ca Sĩ" Grid.Row="5" CornerRadius="100" Grid.ColumnSpan="3" Margin="40,5,40,0"/>
+                <Button x:Name="lichsu" Clicked="lichsu_Clicked" Text="Lịch Sử" Grid.Row="6" CornerRadius="100" Grid.ColumnSpan="3" Margin="40,5,40,0"/>
+                <Button x:Name="logout" Clicked="logout_Clicked" Text="Đăng Xuất" Grid.Row="7" CornerRadius="100" Grid.ColumnSpan="3" Margin="40,5,40,145"/>
+            </Grid>
+        </DataTemplate>
+    </Shell.FlyoutHeaderTemplate>
+
+    <FlyoutItem FlyoutDisplayOptions="AsSingleItem">
+
+        <ShellContent Title="Trang Chủ" Icon="home.png" ContentTemplate="{DataTemplate dst:TrangChu}"/>
+        <ShellContent Title="Cá nhân" Icon="personal.png" ContentTemplate="{DataTemplate dst:CaNhan}"/>
+        <ShellContent Title="Khám phá" Icon="explore.png" ContentTemplate="{DataTemplate  dst:KhamPha}"/>
+        <ShellContent Title="Tin tức" Icon="newspaper1.png" ContentTemplate="{DataTemplate dst:TinTuc}"/>
+
+    </FlyoutItem>
+</Shell>

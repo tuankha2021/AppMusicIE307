@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="MusicApp.DanhSach"
+             Title="Danh sách bài hát">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Nhạc cho cung hoàng đạo"/>
+            <ListView ItemsSource="{Binding ListSongs}" HasUnevenRows="True">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid Margin="15,4,15,4" Padding="4">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="210"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <Frame IsClippedToBounds="True" Grid.Row="0" Grid.Column="0">
+                                    <StackLayout>
+                                        <Image VerticalOptions="Center" Source="{Binding lstimg}"/>
+                                        <Label Text="{Binding lstname}" VerticalOptions="Center" HorizontalOptions="Center"/>
+                                    </StackLayout>
+                                </Frame>
+                                <Frame IsClippedToBounds="True" Grid.Row="0" Grid.Column="1">
+                                    <StackLayout>
+                                        <Image Source="{Binding lstimg1}"/>
+                                        <Label Text="{Binding lstname1}"/>
+                                    </StackLayout>
+                                </Frame>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MusicApp.TheLoai"
+             Title="Thể Loại">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="200"/>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition Height="200"/>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="200"/>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="200" />
+                        <RowDefinition Height="40"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="200"/>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="200" />
+                        <RowDefinition Height="40"/>
+  
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+
+                    <Image Source="theloai.jpg" Grid.Row="0" Aspect="Fill" Margin="0,0,0,20"/>
+
+                    <Label Text="12 cung hoàng đạo" FontSize="20" Grid.Row="1" Margin="15,0,0,0" FontAttributes="Bold"/>
+                    <ImageButton x:Name="ZoloacImagebtn" Clicked="ZoloacImagebtn_Clicked" Source="cunghoangdao.jpg" Grid.Row="2" Aspect="Fill" Margin="15,-10,15,0"/>
+                    <Button x:Name="ZoloacdescButton" Text="Mô tả" Clicked="ZoloacdescButton_Clicked" BackgroundColor="Gray"  Grid.Row="3" Margin="15,-10,15,0"/>
+
+                    <Label Text="VPOP" Grid.Row="4" Margin="15,20,0,0" FontSize="20" FontAttributes="Bold"/>
+                    <ImageButton x:Name="vpopimgbtn" Clicked="vpopimgbtn_Clicked" Source="vpop.jpg" Grid.Row="5" Margin="15,-5,15,0" Aspect="Fill"/>
+                    <Button x:Name="vpopbutton" Clicked="vpopbutton_Clicked" Text="Mô tả" BackgroundColor="Gray" Grid.Row="6" Margin="15,-8,15,0"/>
+
+                    <Label Text="Nhạc Hàn - KPOP" Grid.Row="7" Margin="15,20,0,0" FontSize="20" FontAttributes="Bold"/>
+                    <ImageButton x:Name="kpopimgbtn" Clicked="kpopimgbtn_Clicked" Source="kpop.jpg" Grid.Row="8" Aspect="Fill" Margin="15,-5,15,0"/>
+                    <Button x:Name="kpopbtn" Clicked="kpopbtn_Clicked" Text="Mô tả" Grid.Row="9" BackgroundColor="Gray" Margin="15,-10,15,0"/>
+
+                    <Label Text="Nhạc ngoại lời Việt" FontSize="20" Grid.Row="10" Margin="15,20,0,0" FontAttributes="Bold"/>
+                    <ImageButton x:Name="vnimgbtn" Clicked="vnimgbtn_Clicked" Source="nhacloiviet.jpg" Grid.Row="11" Aspect="Fill" Margin="15,-5,15,0"/>
+                    <Button x:Name="vnbtn" Clicked="vnbtn_Clicked" Text="Mô tả" BackgroundColor="Gray" Margin="15,-10,15,0" Grid.Row="12"/>
+
+                    <Label Text="Nhạc anime" Grid.Row="13" Margin="15,20,0,0" FontSize="20" FontAttributes="Bold"/>
+                    <ImageButton x:Name="aniimgbtn" Clicked="aniimgbtn_Clicked" Source="anime.jpg" Grid.Row="14" Aspect="Fill" Margin="15,-5,15,0"/>
+                    <Button x:Name="anibtn" Clicked="anibtn_Clicked" Text="Mô tả" BackgroundColor="Gray" Margin="15,-10,15,0" Grid.Row="15"/>
+                </Grid>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

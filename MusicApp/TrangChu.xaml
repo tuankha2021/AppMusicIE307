@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="MusicApp.TrangChu"
+             Title="Trang Chủ">
+
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Grid RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width}"
+                  RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height}">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="180"/>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="40" />
+                        <RowDefinition Height="40"/>
+                        <RowDefinition Height="180"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="180" />
+                        <RowDefinition Height="60"/>
+                        <RowDefinition Height="180"/>
+                        <RowDefinition Height="60" />
+                        <RowDefinition Height="180"/>
+                        <RowDefinition Height="60"/>
+                        <RowDefinition Height="180"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+
+                    <Image Source="banner.jpg" Grid.Row="0" Grid.ColumnSpan="4"  BackgroundColor="Transparent" Margin="0,15,0,15"/>
+
+                    <ImageButton x:Name="music_btn" Clicked="music_btn_Clicked" Source="music.png" Grid.Row="1" Grid.Column="0" BackgroundColor="Transparent" />
+                    <ImageButton x:Name="mic_btn" Clicked="mic_btn_Clicked" Source="microphone.png" Grid.Row="1" Grid.Column="1" BackgroundColor="Transparent"/>
+                    <ImageButton x:Name="film_btn" Clicked="film_btn_Clicked" Source="film.png" Grid.Row="1" Grid.Column="2" BackgroundColor="Transparent"/>
+                    <ImageButton x:Name="news_btn" Clicked="news_btn_Clicked" Source="newspaper.png" Grid.Row="1" Grid.Column="3" BackgroundColor="Transparent" />
+
+                    <Label Text="Bài hát mới" Grid.Row="2" Grid.Column="0" HorizontalOptions="Center" />
+                    <Label Text="Karaoke" Grid.Row="2" Grid.Column="1" HorizontalOptions="Center"/>
+                    <Label Text="Top MV" Grid.Row="2" Grid.Column="2" HorizontalOptions="Center"/>
+                    <Label Text="Top event" Grid.Row="2" Grid.Column="3" HorizontalOptions="Center"/>
+
+                    <Label Text="Có thể bạn muốn nghe" FontAttributes="Bold" Grid.Row="3" Grid.ColumnSpan="4" Margin="15,0,0,0" FontSize="20"/>
+                    <CarouselView Margin="45,-10,45,0"
+                                  Grid.Row="4" Grid.ColumnSpan="4" 
+                                  IsBounceEnabled="True" 
+                                  ItemsSource="{Binding MuonNghes}" 
+                                  >
+                        <CarouselView.ItemTemplate>
+                            <DataTemplate>
+                                <StackLayout>
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="150" />
+                                            <RowDefinition Height="30"/>
+                                        </Grid.RowDefinitions>
+                                        <Image Source="{Binding img}" Grid.Row="0"
+                                           Aspect="Fill"
+                                           HorizontalOptions="FillAndExpand"/>
+                                        <Label Text="{Binding name}" FontSize="20" Grid.Row="1" HorizontalOptions="CenterAndExpand" VerticalOptions="EndAndExpand"/>
+                                    </Grid>
+                                </StackLayout>
+                            </DataTemplate>
+                        </CarouselView.ItemTemplate>
+                    </CarouselView>
+
+                    <Label Text="Lựa chọn hôm nay"  FontAttributes="Bold" Grid.Row="5" Grid.ColumnSpan="4" Margin="15,10,0,10" FontSize="20"/>
+                    <CarouselView Margin="45,-10,45,0"
+                                  Grid.Row="6" Grid.ColumnSpan="4" 
+                                  IsBounceEnabled="True" 
+                                  ItemsSource="{Binding LuaChons}" 
+                                  >
+                        <CarouselView.ItemTemplate>
+                            <DataTemplate>
+                                <StackLayout>
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="150" />
+                                            <RowDefinition Height="30"/>
+                                        </Grid.RowDefinitions>
+                                        <Image Source="{Binding img}" Grid.Row="0"
+                                           Aspect="Fill"
+                                           HorizontalOptions="FillAndExpand"/>
+                                        <Label Text="{Binding name}" FontSize="20" Grid.Row="1" HorizontalOptions="CenterAndExpand" VerticalOptions="EndAndExpand"/>
+                                    </Grid>
+                                </StackLayout>
+                            </DataTemplate>
+                        </CarouselView.ItemTemplate>
+                    </CarouselView>
+
+                    <Label Text="Bảng xếp hạng tuần"  FontAttributes="Bold" Grid.Row="7" Grid.ColumnSpan="4" Margin="15,20,0,10" FontSize="20" />
+                    <Image Source="bangxh.jpg" Grid.Row="8" Grid.ColumnSpan="4" Margin="10,-15,10,0"/>
+
+                    <Label Text="Nghe nhiều nhất"  FontAttributes="Bold" Grid.Row="9" Grid.ColumnSpan="4" Margin="15,20,0,0" FontSize="20"/>
+                    <CarouselView Margin="45,-10,45,0"
+                                  Grid.Row="10" Grid.ColumnSpan="4" 
+                                  IsBounceEnabled="True" 
+                                  ItemsSource="{Binding NgheNhieus}" 
+                                  >
+                        <CarouselView.ItemTemplate>
+                            <DataTemplate>
+                                <StackLayout>
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="150" />
+                                            <RowDefinition Height="30"/>
+                                        </Grid.RowDefinitions>
+                                        <Image Source="{Binding img}" Grid.Row="0"
+                                           Aspect="Fill"
+                                           HorizontalOptions="FillAndExpand"/>
+                                        <Label Text="{Binding name}" FontSize="20" Grid.Row="1" HorizontalOptions="CenterAndExpand" VerticalOptions="EndAndExpand"/>
+                                    </Grid>
+                                </StackLayout>
+                            </DataTemplate>
+                        </CarouselView.ItemTemplate>
+                    </CarouselView>
+
+                    <Label Text="MV nổi bật"  FontAttributes="Bold" Grid.Row="11" Grid.ColumnSpan="4" Margin="15,20,0,0" FontSize="20"/>
+                    <CarouselView Margin="45,-10,45,0"
+                                  Grid.Row="12" Grid.ColumnSpan="4" 
+                                  IsBounceEnabled="True" 
+                                  ItemsSource="{Binding MVNois}" 
+                                  >
+                        <CarouselView.ItemTemplate>
+                            <DataTemplate>
+                                <StackLayout>
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="150" />
+                                            <RowDefinition Height="30"/>
+                                        </Grid.RowDefinitions>
+                                        <Image Source="{Binding img}" Grid.Row="0"
+                                           Aspect="Fill"
+                                           HorizontalOptions="FillAndExpand"/>
+                                        <Label Text="{Binding name}" FontSize="20" Grid.Row="1" HorizontalOptions="CenterAndExpand" VerticalOptions="EndAndExpand"/>
+                                    </Grid>
+                                </StackLayout>
+                            </DataTemplate>
+                        </CarouselView.ItemTemplate>
+                    </CarouselView>
+                </Grid>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
+
+
+    
+     

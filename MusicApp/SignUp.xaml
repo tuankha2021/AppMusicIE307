@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MusicApp.SignUp"
+             Title="Đăng Ký">
+    <ContentPage.Content>
+        <RelativeLayout>
+            <Image Source="singupbg.jpg" HorizontalOptions="Fill" Aspect="Fill"
+                   RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width}"
+                  RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height}"/>
+            <Grid RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width}"
+                  RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height}">
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+
+                <Label Text="Đăng ký" 
+                       TextColor="AliceBlue"
+                       FontSize="30" 
+                       Grid.Row="0" 
+                       Grid.Column="0" 
+                       Grid.ColumnSpan="2" 
+                       HorizontalOptions="Center" 
+                       VerticalOptions="Center" />
+                <Label Text="Tên đăng nhập: " 
+                       FontSize="20" 
+                       Grid.Row="1" 
+                       Grid.Column="0" 
+                       VerticalOptions="Center" 
+                       Margin="15,0,0,0"
+                       />
+                <Entry Keyboard="Text" 
+                       ClearButtonVisibility="WhileEditing"
+                       Grid.Column="1" 
+                       Grid.Row="1" 
+                       VerticalOptions="Center"
+                       Margin="0,0,15,0"/>
+                <Label Text="Mật khẩu: " 
+                       FontSize="20" 
+                       Grid.Row="2" 
+                       Grid.Column="0" 
+                       VerticalOptions="Center" 
+                       Margin="15,0,0,0"/>
+                <Entry Keyboard="Text" 
+                       ClearButtonVisibility="WhileEditing"
+                       IsPassword="True" 
+                       Grid.Column="1" 
+                       Grid.Row="2" 
+                       VerticalOptions="Center"
+                       Margin="0,0,15,0"/>
+                <Label Text="Nhập lại mật khẩu: " 
+                       FontSize="20" 
+                       Grid.Row="3" 
+                       Grid.Column="0"
+                       VerticalOptions="Center" 
+                       Margin="15,0,0,0"/>
+                <Entry Keyboard="Text" 
+                       ClearButtonVisibility="WhileEditing"
+                       IsPassword="True" 
+                       Grid.Column="1" 
+                       Grid.Row="3" 
+                       VerticalOptions="Center"
+                       Margin="0,0,15,0"/>
+                <Label Text="Số điện thoại: " 
+                       FontSize="20" 
+                       Grid.Row="4" 
+                       Grid.Column="0" 
+                       VerticalOptions="Center"
+                       Margin="15,0,0,0"/>
+                <Entry Keyboard="Telephone" 
+                       ClearButtonVisibility="WhileEditing"
+                       Grid.Column="1" Grid.Row="4" 
+                       VerticalOptions="Center"
+                       Margin="0,0,15,0"/>
+                <CheckBox x:Name="checkbox" 
+                          Grid.Column="0" Grid.Row="5" Grid.ColumnSpan="2"
+                          Margin="50,10" 
+                          />
+                <Label Text="Tôi đồng ý với điều khoản của trang web" 
+                       Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2"
+                       Margin="80,30"
+                       />
+                <Button x:Name="signUp_button"
+                        Text="Đăng ký" 
+                        Clicked="signUp_button_Clicked"
+                        VerticalOptions="Start" HorizontalOptions="Center" 
+                        CornerRadius="10" 
+                        Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2" />
+
+            </Grid>
+        </RelativeLayout>
+    </ContentPage.Content>
+</ContentPage>

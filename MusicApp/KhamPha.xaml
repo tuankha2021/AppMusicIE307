@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MusicApp.KhamPha"
+             Title="Khám Phá">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="180"/>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition Height="180" />
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="180"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="180"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+
+                    <Image Source="slide5.jpg" Grid.Row="0" Grid.Column="0"  BackgroundColor="Transparent" Margin="0,15,0,15"/>
+
+                    <Label Text="Hot nhất tuần này" Grid.Row="1" Grid.Column="0" Margin="10,0,0,0" FontSize="20"/>
+                    <CarouselView Margin="45,-10,45,0"
+                                  Grid.Row="2" Grid.Column="0" 
+                                  IsBounceEnabled="True" 
+                                  ItemsSource="{Binding HotTuans}" 
+                                  >
+                        <CarouselView.ItemTemplate>
+                            <DataTemplate>
+                                <StackLayout>
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="150" />
+                                            <RowDefinition Height="30"/>
+                                        </Grid.RowDefinitions>
+                                        <ImageButton x:Name="hottuan_btn" Clicked="hottuan_btn_Clicked" Source="{Binding img}" Grid.Row="0"
+                                           Aspect="Fill"
+                                           HorizontalOptions="FillAndExpand"/>
+                                        <Label Text="{Binding name}" FontSize="20" Grid.Row="1" HorizontalOptions="CenterAndExpand" VerticalOptions="EndAndExpand"/>
+                                    </Grid>
+                                </StackLayout>
+                            </DataTemplate>
+                        </CarouselView.ItemTemplate>
+                    </CarouselView>
+
+                    <Label Text="Ngược dòng thời gian" Grid.Row="3" Grid.Column="0" Margin="10,10,0,10" FontSize="20"/>
+                    <CarouselView Margin="45,-10,45,0"
+                                  Grid.Row="4" Grid.Column="0" 
+                                  IsBounceEnabled="True" 
+                                  ItemsSource="{Binding VongQuanhs}" 
+                                  >
+                        <CarouselView.ItemTemplate>
+                            <DataTemplate>
+                                <StackLayout>
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="150" />
+                                            <RowDefinition Height="30"/>
+                                        </Grid.RowDefinitions>
+                                        <ImageButton x:Name="vongquanh_btn" Clicked="vongquanh_btn_Clicked" Source="{Binding img}" Grid.Row="0"
+                                           Aspect="Fill"
+                                           HorizontalOptions="FillAndExpand"/>
+                                        <Label Text="{Binding name}" FontSize="20" Grid.Row="1" HorizontalOptions="CenterAndExpand" VerticalOptions="EndAndExpand"/>
+                                    </Grid>
+                                </StackLayout>
+                            </DataTemplate>
+                        </CarouselView.ItemTemplate>
+                    </CarouselView>
+
+                    <Label Text="Vòng quanh thế giới" Grid.Row="5" Grid.Column="0" Margin="10,10,0,10" FontSize="20"/>
+                    <CarouselView Margin="45,-10,45,0"
+                                  Grid.Row="6" Grid.Column="0" 
+                                  IsBounceEnabled="True" 
+                                  ItemsSource="{Binding NguocDongs}" 
+                                  >
+                        <CarouselView.ItemTemplate>
+                            <DataTemplate>
+                                <StackLayout>
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="150" />
+                                            <RowDefinition Height="30"/>
+                                        </Grid.RowDefinitions>
+                                        <ImageButton x:Name="ngcdong_btn" Clicked="ngcdong_btn_Clicked" Source="{Binding img}" Grid.Row="0"
+                                           Aspect="Fill"
+                                           HorizontalOptions="FillAndExpand"/>
+                                        <Label Text="{Binding name}" FontSize="20" Grid.Row="1" HorizontalOptions="CenterAndExpand" VerticalOptions="EndAndExpand"/>
+                                    </Grid>
+                                </StackLayout>
+                            </DataTemplate>
+                        </CarouselView.ItemTemplate>
+                    </CarouselView>
+                </Grid>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
